@@ -1,0 +1,2 @@
+# deeplyCore
+init deeply project
