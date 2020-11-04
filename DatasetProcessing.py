@@ -321,7 +321,7 @@ def resizeData(table1, table2):
 
     sampleSize = matrix1Row if matrix1Row <= matrix2Row else matrix2Row
     numSampleToSelect = (sampleSize * 95) / 100
-
+    numSampleToSelect =int(numSampleToSelect)
     reSizedMatrix1 = matrix1[np.random.choice(matrix1Row, numSampleToSelect, replace=False), :]
     reSizedMatrix2 = matrix2[np.random.choice(matrix2Row, numSampleToSelect, replace=False), :]
 
