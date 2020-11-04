@@ -67,7 +67,7 @@ def combineAndSplitData(EssentialGeneFeatTable, NonEssentialGeneFeatTable, train
     for i in range(corr.shape[0]):
         for j in range(i, corr.shape[1]):
             if (corr[i][j] >= 0.90 or corr[i][j] <= -0.90) and i != j:
-                print corr[i][j]
+                print(corr[i][j])
                 corr_feat_list.append([i, j])
 
     # calculating training, validation, testing data portion
