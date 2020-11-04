@@ -49,7 +49,7 @@ class BuildDNNModel(object):
         super(BuildDNNModel, self).__init__()
         self.data = data
         self.bins = bins
-	self.model_dir =model_dir
+	self.model_dir =model_dir 
         make_folder(self.model_dir)
         self.corr_feats = data.getCorrFeats()
         self.feat_index_dict = dict()
