@@ -82,12 +82,12 @@ def main():
     f_th = open(experimentName + 'Thresholds.txt', 'a')
 
     for i in range(0, paramDict['repeat']):
-        print 'Iteration', i
+        print ('Iteration', i)
         #model = BuildDNNModel(data, paramDict['bins'], f_tp, f_fp, f_th) # default fonction we are add this params iteration,expName,resultDir
         model = BuildDNNModel(data, paramDict['bins'], f_tp, f_fp, f_th,i,experimentName,result_dir)
         evaluationDict = model.getEvaluationStat()
 
-        print evaluationDict
+        print (evaluationDict)
 
         writeEvaluationStat(evaluationDict, fWrite, i + 1)
 
