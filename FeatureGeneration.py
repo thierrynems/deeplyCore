@@ -171,7 +171,7 @@ class FeatureProcessing(object):
             binnedGCFeat = list()
             binnedSeqLength = len(self.EssentialGeneSeqInfo[seqName]) / bins
             startPos = 0
-            endPos = binnedSeqLength
+            endPos = int(binnedSeqLength)
             for i in range(0, bins):
                 if endPos > len(self.EssentialGeneSeqInfo[seqName]):
                     binnedSequence = self.EssentialGeneSeqInfo[seqName][startPos:]
@@ -220,7 +220,7 @@ class FeatureProcessing(object):
             binnedGCFeat = list()
             binnedSeqLength = len(self.NonEssentialGeneSeqInfo[seqName]) / bins
             startPos = 0
-            endPos = binnedSeqLength
+            endPos = int(binnedSeqLength)
             for i in range(0, bins):
                 if endPos > len(self.NonEssentialGeneSeqInfo[seqName]):
                     binnedSequence = self.NonEssentialGeneSeqInfo[seqName][startPos:]
