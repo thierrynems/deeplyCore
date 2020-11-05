@@ -21,20 +21,8 @@ datasetNE_nt="Dataset/nonEssential/degseq-np.dat"
 
 #init de folder name
 baseDirEssential="Dataset/Train/essential"
-#test if baseDir exists
-if os.path.isdir(baseDirEssential): 
-	print("le repertoire existe")
-else: 
-	print("Creation du repertoire "+ baseDirEssential)
-	os.mkdir(baseDirEssential);
 #init de folder name
 baseDirNonEssential="Dataset/Train/nonEssential"
-#test if baseDir exists
-if os.path.isdir(baseDirNonEssential): 
-	print("le repertoire existe")
-else: 
-	print("Creation du repertoire "+ baseDirNonEssential)
-	os.mkdir(baseDirNonEssential);
 
 idListE_aa=list()
 idListE_nt=list()
