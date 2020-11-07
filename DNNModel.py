@@ -240,12 +240,13 @@ def buildAndRunModel(dataDict, numberOfFeatEachBin, bins, numberOfClasses, f_tp,
 
     # get TP, TN, FP, FN to calculate sensitivity, specificity, PPV and accuracy
     TP, TN, FP, FN = getTPTNValues(testLabelRev, testPredLabelRev)
-
-    sensitivity = float(TP) / float(TP + FN)
-    specificity = float(TN) / float(TN + FP)
-    PPV = float(TP) / float(TP + FP)
-    accuracy = float(TP + TN) / float(TP + FP + FN + TN)
-
+    try:
+      sensitivity = float(TP) / float(TP + FN)
+      specificity = float(TN) / float(TN + FP)
+      PPV = float(TP) / float(TP + FP)
+      accuracy = float(TP + TN) / float(TP + FP + FN + TN)
+    except:
+      print("Warning: division by zero") 
     # dictionary to store evaluation stat
     evaluationInfo = {
         'roc_auc': roc_auc,
